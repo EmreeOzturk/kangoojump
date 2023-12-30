@@ -7,6 +7,7 @@ import Lenis from '@studio-freight/lenis'
 import { clsx } from 'clsx';
 import Image from 'next/image';
 import useDimension from '../hooks/useDimension';
+import Cards from './Cards';
 const Gallery = () => {
     const { height } = useDimension();
     const gallery = useRef(null);
@@ -38,7 +39,6 @@ const Gallery = () => {
                 <Column images={[images[6].image, images[7].image, images[0].image]} css="-top-[45%]" y={y3} />
                 <Column images={[images[3].image, images[2].image, images[3].image]} css="-top-[75%]" y={y4} />
             </div>
-            <div className="h-[100vh]"></div>
         </>
     )
 }
