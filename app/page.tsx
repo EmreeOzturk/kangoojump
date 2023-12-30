@@ -6,7 +6,7 @@ import Referances from "./components/Referances"
 export default function Home() {
 
   return (
-    <main className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-400 via-gray-600 to-blue-800">
+    <main >
       <Banner />
       <Cards />
       <Gallery />

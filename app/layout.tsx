@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='antialiased no-scrollbar'>
-      <body className={roboto.className}>
+      <body className={`bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-400 via-gray-600 to-blue-800 ${roboto.className}`}>
         <Header />
         <PageTransitionProvider>
           {children}
