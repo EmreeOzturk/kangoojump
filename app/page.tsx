@@ -5,10 +5,10 @@ import Cards from "./components/Cards"
 export default function Home() {
 
   return (
-    <main className="bg-slate-700">
+    <main className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-400 via-gray-600 to-blue-800">
       <Banner />
-      <Gallery />
       <Cards />
+      <Gallery />
     </main>
   )
 }
