@@ -1,10 +1,14 @@
+"use client";
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
+import { clsx } from 'clsx';
 const Navbar = () => {
+    const pathname = usePathname()
     return (
         <nav className='flex gap-8 items-center text-md font-bold uppercase tracking-[1px]'>
             <div className='group'>
-                <Link href="/about">
+                <Link className={clsx(pathname === "/about" && "text-[#C4FE01]")} href="/about">
                     Hakkımızda
                 </Link>
                 <div
@@ -12,7 +16,7 @@ const Navbar = () => {
                 ></div>
             </div>
             <div className='group'>
-                <Link href="/catalog">
+                <Link className={clsx(pathname === "/catalog" && "text-[#C4FE01]")} href="/catalog">
                     Katalog
                 </Link>
                 <div
@@ -20,7 +24,7 @@ const Navbar = () => {
                 ></div>
             </div>
             <div className='group'>
-                <Link href="/activities">
+                <Link className={clsx(pathname === "/activities" && "text-[#C4FE01]")} href="/activities">
                     Aktiviteler
                 </Link>
                 <div
@@ -28,7 +32,7 @@ const Navbar = () => {
                 ></div>
             </div>
             <div className='group'>
-                <Link href="/contact">
+                <Link className={clsx(pathname === "/contact" && "text-[#C4FE01]")} href="/contact">
                     Iletisim
                 </Link>
                 <div
