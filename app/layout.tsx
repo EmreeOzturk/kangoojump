@@ -4,6 +4,7 @@ import './globals.css'
 import Header from './components/Header'
 import PageTransitionProvider from './providers/PageTransitionProvider'
 import Footer from './components/Footer'
+import WhatsappButton from './components/WhatsappButton'
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <PageTransitionProvider>
           {children}
         </PageTransitionProvider>
+        <WhatsappButton />
         <Footer />
       </body>
     </html>
