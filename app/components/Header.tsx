@@ -24,7 +24,7 @@ const Header = () => {
     }, [scrollY])
     if (path !== "/") {
         return (
-            <div className='border-b border-black flex h-20 w-full px-10 justify-between items-center bg-slate-700/50 fixed z-10 text-white'>
+            <div className='border-b border-black flex h-20 w-full px-10 justify-between items-center bg-black/40 fixed z-10 text-white'>
                 <Logo />
                 <Navbar />
             </div>
@@ -50,7 +50,7 @@ const Header = () => {
             }
             transition={{ duration: 0.5, ease: "easeInOut" }}
 
-            className='border-b border-black flex h-20 w-full px-10 justify-between items-center bg-[#C4FE01]/70 fixed z-10 text-white'>
+            className=' flex h-20 w-full px-10 justify-between items-center bg-black/40 fixed z-10 text-white'>
             <Logo />
             <Navbar />
         </motion.div>
@@ -58,3 +58,5 @@ const Header = () => {
 }
 
 export default Header
+
+// bg-[#C4FE01]/70

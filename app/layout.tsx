@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Roboto } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header'
-import { motion, AnimatePresence } from 'framer-motion'
 import PageTransitionProvider from './providers/PageTransitionProvider'
-const inter = Inter({ subsets: ['latin'] })
+const acme = Roboto({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,12 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='antialiased'>
-      <body className={inter.className}>
+      <body className={acme.className}>
         <Header />
         <PageTransitionProvider>
           {children}
         </PageTransitionProvider>
-
       </body>
     </html>
   )
