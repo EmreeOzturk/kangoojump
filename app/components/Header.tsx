@@ -31,28 +31,30 @@ const Header = () => {
         )
     }
     return (
-        <motion.div
-            variants={
-                {
-                    visible: {
-                        y: 0,
+        <header>
+            <motion.div
+                variants={
+                    {
+                        visible: {
+                            y: 0,
 
-                    },
-                    hidden: {
-                        y: "-100%"
+                        },
+                        hidden: {
+                            y: "-100%"
+                        }
                     }
                 }
-            }
-            initial="hidden"
-            animate={
-                show ? "visible" : "hidden"
-            }
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+                initial="hidden"
+                animate={
+                    show ? "visible" : "hidden"
+                }
+                transition={{ duration: 0.5, ease: "easeInOut" }}
 
-            className='flex h-20 w-full px-10 justify-between items-center bg-black/30 fixed z-10 text-white'>
-            <Logo />
-            <Navbar />
-        </motion.div>
+                className='flex h-20 w-full px-10 justify-between items-center bg-black/30 fixed z-10 text-white'>
+                <Logo />
+                <Navbar />
+            </motion.div>
+        </header>
     )
 }
 
