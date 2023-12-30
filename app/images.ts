@@ -11,33 +11,41 @@ export const images = [
   {
     id: 1,
     image: bir,
+    alt: "1",
   },
   {
     id: 2,
     image: iki,
+    alt: "2",
   },
   {
     id: 3,
     image: uc,
+    alt: "3",
   },
   {
     id: 4,
     image: dort,
+    alt: "4",
   },
   {
     id: 5,
     image: bes,
+    alt: "5",
   },
   {
     id: 6,
     image: alti,
+    alt: "6",
   },
   {
     id: 7,
     image: yedi,
+    alt: "7",
   },
   {
     id: 8,
     image: sekiz,
+    alt: "8",
   },
 ];
