@@ -8,22 +8,26 @@ export const brands = [
   {
     id: 1,
     image: bir,
+    alt: "bir",
   },
   {
     id: 2,
     image: iki,
+    alt: "iki",
   },
   {
     id: 3,
     image: uc,
+    alt: "uc",
   },
   {
     id: 4,
     image: dort,
+    alt: "dort",
   },
   {
     id: 5,
     image: bes,
+    alt: "bes",
   },
 ];
-
