@@ -6,7 +6,7 @@ import Referances from "./components/Referances"
 export default function Home() {
 
   return (
-    <main >
+    <main>
       <Banner />
       <Cards />
       <Gallery />
