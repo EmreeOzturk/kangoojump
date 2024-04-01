@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='h-80 bg-black/40 text-slate-300 flex items-center justify-between px-24 gap-12'>
             <FooterAboutUs />
             <FooterActivities />
-            <FooterCarrier />
+            {/* <FooterCarrier /> */}
             <FooterContactUs />
         </div>
     )

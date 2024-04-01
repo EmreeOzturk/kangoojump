@@ -3,10 +3,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const Banner = () => {
     return (
-        <div className='h-screen w-screen relative '>
+        <section className='h-screen w-screen relative '>
             <video autoPlay loop muted src="/static/bgvid.webm" className='h-screen w-screen object-fill'>
             </video>
-
             <motion.div
                 animate={{ opacity: 1, scale: 1 }
                 }
@@ -18,7 +17,7 @@ const Banner = () => {
                     ACTIVE
                 </h1>
             </motion.div>
-        </div>
+        </section>
     )
 }
 

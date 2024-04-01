@@ -1,5 +1,3 @@
-import React from 'react'
-
 const FooterCarrier = () => {
     return (
         <div className='flex flex-col items-start justify-center w-1/4'>

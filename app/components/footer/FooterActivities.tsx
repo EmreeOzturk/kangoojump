@@ -5,29 +5,29 @@ const FooterActivities = () => {
             <h3 className='font-bold text-3xl mb-10'>AKTIVITELERIMIZ</h3>
             <ul className='flex flex-col items-start justify-center gap-2'>
                 <li className='text-[16px]'>
-                    <Link href='/activities/kangoo-jumps'>
+                    <a href='/activities/kangoo-jumps'>
                         Kangoo Jump
-                    </Link>
+                    </a>
                 </li>
                 <li className='text-[16px]'>
-                    <Link href='/activities/aqua-jump'>
+                    <a href='/activities/aqua-jump'>
                         Aqua Jump
-                    </Link>
+                    </a>
                 </li>
                 <li className='text-[16px]'>
-                    <Link href='/activities/aqua-fitness'>
+                    <a href='/activities/aqua-fitness'>
                         Aqua Fitness
-                    </Link>
+                    </a>
                 </li>
                 <li className='text-[16px]'>
-                    <Link href='/activities/aqua-bike'>
+                    <a href='/activities/aqua-bike'>
                         Aqua Bike
-                    </Link>
+                    </a>
                 </li>
                 <li className='text-[16px]'>
-                    <Link href='/activities/aqua-step'>
+                    <a href='/activities/aqua-step'>
                         Aqua Step
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>
