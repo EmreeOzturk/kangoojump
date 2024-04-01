@@ -1,4 +1,3 @@
-import Image, { StaticImageData } from "next/image"
 import Gallery from "./components/Gallery"
 import Banner from "./components/Banner"
 import Cards from "./components/Cards"
