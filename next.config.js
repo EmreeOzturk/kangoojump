@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  webpack: (config) => {
+    config.resolve.alias.canvas = false;
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: {
+        loader: "url-loader",
+      },
+    });
+    return config;
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
