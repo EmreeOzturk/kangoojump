@@ -29,6 +29,7 @@ const Cards = () => {
                     <Card key={`p_${i}`} i={i} feature={feature} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale} />
                 )
             })}
+
         </main>
     )
 }
