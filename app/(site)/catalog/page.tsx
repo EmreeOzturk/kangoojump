@@ -3,7 +3,7 @@ import React from 'react'
 
 const Catalog = () => {
     return (
-        <div>
+        <div className='h-[100vh] py-8 mb-32 '>
             <FlipBookPDF />
         </div>
     )
