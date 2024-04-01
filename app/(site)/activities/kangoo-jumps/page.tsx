@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { title } from 'process'
 import React from 'react'
 
-export const content = [
+const content = [
     {
         title: "Kangoo Jumps: Sağlığınıza Yepyeni Bir Yaklaşım",
         description:

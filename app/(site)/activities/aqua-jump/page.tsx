@@ -1,6 +1,5 @@
 import { StickyScroll } from '@/app/components/ui/sticky-scroll-reveal';
 import Image from 'next/image';
-import { title } from 'process';
 import React from 'react'
 const content = [
     {
