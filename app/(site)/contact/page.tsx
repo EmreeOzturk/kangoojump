@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section className="py-6  bg-white w-screen">
+    <section className="h-screen flex justify-center items-center max-w-7xl m-auto">
       <div className="grid  grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
         <div className="py-6 md:py-0 md:px-6">
           <h1 className="text-5xl font-bold">Bizimle iletişime geçin</h1>
@@ -39,24 +39,24 @@ const Contact = () => {
         </div>
         <form className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
           <div className='flex justify-between gap-10'>
-            <label className='w-full'>
+            <label className='w-full '>
               <span className="mb-1">Adınız</span>
-              <input type="text" className="block w-full p-4 rounded-md shadow-sm outline-none focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
+              <input type="text" required className=" block border focus:border-none bg-gray-400/40 w-full p-4 rounded-md shadow-sm outline-none focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
             </label>
             <label className='w-full'>
               <span className="mb-1">Soyadınız</span>
-              <input type="text" className="block p-4 w-full  rounded-md shadow-sm focus:ring outline-none focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
+              <input type="text" required className="block border focus:border-none bg-gray-400/40 p-4 w-full  rounded-md shadow-sm focus:ring outline-none focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
             </label>
           </div>
           <label className="block">
             <span className="mb-1">Email</span>
-            <input type="email" className="block p-4 w-full rounded-md shadow-sm focus:ring outline-none focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
+            <input type="email" required className="block border focus:border-none bg-gray-400/40 p-4 w-full rounded-md shadow-sm focus:ring outline-none focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
           </label>
           <label className="block">
             <span className="mb-1">Message</span>
-            <textarea rows={5} className="block outline-none w-full p-4 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
+            <textarea rows={5} required className="block border focus:border-none bg-gray-400/40 outline-none w-full p-4 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
           </label>
-          <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Gönder</button>
+          <button type="button" className="border-2 self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Gönder</button>
         </form>
       </div>
     </section >
