@@ -1,7 +1,6 @@
-import Link from 'next/link'
 const FooterActivities = () => {
     return (
-        <div className='flex flex-col items-start justify-center w-1/4'>
+        <div className='flex flex-col w-screen items-start justify-center p-4 md:p-0 md:w-1/4'>
             <h3 className='font-bold text-3xl mb-10'>AKTIVITELERIMIZ</h3>
             <ul className='flex flex-col items-start justify-center gap-2'>
                 <li className='text-[16px]'>

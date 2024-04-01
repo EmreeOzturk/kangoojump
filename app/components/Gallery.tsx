@@ -33,11 +33,11 @@ const Gallery = () => {
     return (
         <>
             <div className="h-[1vh]"></div>
-            <div ref={gallery} className="h-[180vh] bg-slate-700 relative flex flex-col md:flex-row gap-2 p-2 overflow-hidden">
-                <Column images={[images[0].image, images[1].image, images[3].image]} css="-top-[65%]" y={y} />
-                <Column images={[images[3].image, images[4].image, images[5].image]} css="-top-[95%]" y={y2} />
-                <Column images={[images[6].image, images[7].image, images[0].image]} css="-top-[45%]" y={y3} />
-                <Column images={[images[3].image, images[2].image, images[3].image]} css="-top-[75%]" y={y4} />
+            <div ref={gallery} className="h-full  md:h-[180vh] bg-slate-700 relative flex flex-col md:flex-row gap-2 p-2 md:overflow-hidden">
+                <Column images={[images[0].image, images[1].image, images[3].image]} css="md:-top-[65%]" y={y} />
+                <Column images={[images[3].image, images[4].image, images[5].image]} css="md:-top-[95%]" y={y2} />
+                <Column images={[images[6].image, images[7].image, images[0].image]} css="md:-top-[45%]" y={y3} />
+                <Column images={[images[3].image, images[2].image, images[3].image]} css="md:-top-[75%]" y={y4} />
             </div>
         </>
     )
@@ -48,7 +48,7 @@ export default Gallery
 
 const Column = ({ images, css, y }: any) => {
     return (
-        <motion.div className={clsx("relative h-full w-1/2 md:w-full  flex flex-col gap-2", css)} style={{ y }}>
+        <motion.div className={clsx("relative md:h-full h-[500px] w-full md:w-full  flex flex-col gap-2", css)} style={{ y }}>
             {images.map((src: any, index: any) => {
                 return (
                     <div className={clsx("h-full w-full relative rounded-md overflow-hidden")} key={index}>

@@ -4,7 +4,7 @@ import { BiWorld } from "react-icons/bi";
 
 const FooterContactUs = () => {
     return (
-        <div className='flex flex-col items-start justify-center w-1/4'>
+        <div className='flex flex-col items-start justify-center p-4 md:p-0 md:w-1/4'>
             <h3 className='font-bold text-3xl mb-10'>BIZE ULASIN</h3>
             <ul className='flex  flex-col items-start justify-center gap-2'>
                 <li className='flex items-center gap-4 text-[16px]'><MdPhone /> +90 543 9466</li>

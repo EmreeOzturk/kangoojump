@@ -50,7 +50,7 @@ const Header = () => {
                 }
                 transition={{ duration: 0.5, ease: "easeInOut" }}
 
-                className='flex h-20 w-full px-10 justify-between items-center bg-black/30 fixed z-10 text-white'>
+                className='flex h-20 md:w-full md:px-10 justify-between items-center bg-black/30 fixed z-10 text-white'>
                 <Logo />
                 <Navbar />
             </motion.div>
