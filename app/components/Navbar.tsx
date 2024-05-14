@@ -46,34 +46,61 @@ const MobileDropdown = ({
     <div className="absolute top-20 border border-white rounded-lg right-0 gap-2 bg-gray-800 w-80 text-white flex flex-col items-start justify-start p-4">
       {show ? (
         <>
-          <a className="activities-item" href="/activities/kangoo-jumps">
+          <a
+            className="activities-item hover:text-[#C4FE01]"
+            href="/activities/kangoo-jumps"
+          >
             Kangoo Jumps
           </a>
-          <a className="activities-item" href="/activities/aqua-jump">
+          <a
+            className="activities-item hover:text-[#C4FE01]"
+            href="/activities/aqua-jump"
+          >
             Aqua Jump
           </a>
-          <a className="activities-item" href="/activities/aqua-fitness">
+          <a
+            className="activities-item hover:text-[#C4FE01]"
+            href="/activities/aqua-fitness"
+          >
             Aqua Fitness
           </a>
-          <a className="activities-item" href="/activities/aqua-bike">
+          <a
+            className="activities-item hover:text-[#C4FE01]"
+            href="/activities/aqua-bike"
+          >
             Aqua Bike
           </a>
-          <a className="activities-item" href="/activities/aqua-step">
+          <a
+            className="activities-item hover:text-[#C4FE01]"
+            href="/activities/aqua-step"
+          >
             Aqua Step
           </a>
         </>
       ) : (
         <>
-          <a className="mobile-menu-item" href="/about">
+          <a
+            className="mobile-menu-item  w-full hover:text-[#C4FE01]"
+            href="/about"
+          >
             Hakkımızda
           </a>
-          <a className="mobile-menu-item" href="/catalog">
+          <a
+            className="mobile-menu-item  w-full hover:text-[#C4FE01]"
+            href="/catalog"
+          >
             Katalog
           </a>
-          <button className="mobile-menu-item" onClick={() => setShow(true)}>
+          <button
+            className="mobile-menu-item hover:text-[#C4FE01]"
+            onClick={() => setShow(true)}
+          >
             Aktiviteler
           </button>
-          <a className="mobile-menu-item" href="/contact">
+          <a
+            className="mobile-menu-item w-full hover:text-[#C4FE01]"
+            href="/contact"
+          >
             Iletisim
           </a>
         </>
@@ -86,73 +113,85 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const pathname = usePathname();
-  const isMobile = useMediaQuery(768);
+  // const isMobile = useMediaQuery(768);
 
-  if (isMobile) {
-    return (
-      <div>
+  // if (isMobile) {
+  //   return (
+  //     <div>
+  //       <GiHamburgerMenu
+  //         className="text-4xl text-white"
+  //         onClick={() =>{
+  //            setShowDropdown(!showDropdown);
+  //            setShow(false);
+  //         }}
+  //       />
+  //       {showDropdown && <MobileDropdown show={show} setShow={setShow} />}
+  //     </div>
+  //   );
+  // }
+  return (
+    <>
+      <div className=" flex md:hidden">
         <GiHamburgerMenu
-          className="text-4xl text-white"
-          onClick={() =>{
-             setShowDropdown(!showDropdown);
-             setShow(false);
+          className="text-4xl text-white z-20"
+          onClick={() => {
+            setShowDropdown(!showDropdown);
+            setShow(false);
           }}
         />
         {showDropdown && <MobileDropdown show={show} setShow={setShow} />}
       </div>
-    );
-  }
-  return (
-    <nav className="flex gap-8 items-center text-md font-bold uppercase tracking-[1px]">
-      <div className="group">
-        <a
-          className={clsx(pathname === "/about" && "text-[#C4FE01]")}
-          href="/about"
-        >
-          Hakkımızda
-        </a>
-        <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
-      </div>
-      <div className="group">
-        <Link
-          onMouseEnter={() => {
-            setShow(false);
-          }}
-          className={clsx(pathname === "/catalog" && "text-[#C4FE01]")}
-          href="/catalog"
-        >
-          Katalog
-        </Link>
-        <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
-      </div>
-      <div className="group relative">
-        <button
-          onMouseEnter={() => {
-            setShow(true);
-          }}
-          className={clsx(
-            "uppercase",
-            pathname.startsWith("/activities") && "text-[#C4FE01]"
-          )}
-        >
-          Aktiviteler
-        </button>
-        <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
-        {show && <Dropdown setShow={setShow} />}
-      </div>
-      <div className="group">
-        <Link
-          onMouseEnter={() => {
-            setShow(false);
-          }}
-          className={clsx(pathname === "/contact" && "text-[#C4FE01]")}
-          href="/contact"
-        >
-          Iletisim
-        </Link>
-        <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
-      </div>
-    </nav>
+      <nav className="md:flex gap-8 items-center text-md font-bold uppercase tracking-[1px] hidden">
+        <div className="group">
+          <a
+            className={clsx(pathname === "/about" && "text-[#C4FE01]")}
+            href="/about"
+          >
+            Hakkımızda
+          </a>
+          <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
+        </div>
+        <div className="group">
+          <Link
+            onMouseEnter={() => {
+              setShow(false);
+            }}
+            className={clsx(pathname === "/catalog" && "text-[#C4FE01]")}
+            href="/catalog"
+          >
+            Katalog
+          </Link>
+          <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
+        </div>
+        <div className="group relative">
+          <button
+            onMouseEnter={() => {
+              setShow(true);
+            }}
+            className={clsx(
+              "uppercase",
+              pathname.startsWith("/activities") && "text-[#C4FE01]"
+            )}
+          >
+            Aktiviteler
+          </button>
+          <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
+          {show && <Dropdown setShow={setShow} />}
+        </div>
+        <div className="group">
+          <Link
+            onMouseEnter={() => {
+              setShow(false);
+            }}
+            className={clsx(pathname === "/contact" && "text-[#C4FE01]")}
+            href="/contact"
+          >
+            Iletisim
+          </Link>
+          <div className="h-1 w-0 bg-[#C4FE01] rounded-full group-hover:w-full transition-all duration-500 mt-1"></div>
+        </div>
+      </nav>
+    </>
   );
 };
 
