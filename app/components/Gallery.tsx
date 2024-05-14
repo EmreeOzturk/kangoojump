@@ -29,6 +29,16 @@ const Gallery = () => {
     };
     requestAnimationFrame(raf);
   }, []);
+  if (window.innerWidth < 768) {
+    return (
+      <div className=" bg-red-700 relative flex flex-col md:flex-row gap-2 p-2 ">
+        <Column images={[images[0].image, images[1].image, images[3].image]} />
+        <Column images={[images[3].image, images[4].image, images[5].image]} />
+        <Column images={[images[6].image, images[7].image, images[0].image]} />
+        <Column images={[images[3].image, images[2].image, images[3].image]} />
+      </div>
+    );
+  }
   return (
     <>
       <div className="h-[1vh]"></div>
@@ -66,12 +76,7 @@ export default Gallery;
 const Column = ({ images, css, y }: any) => {
   if (window.innerWidth < 768) {
     return (
-      <motion.div
-        className={clsx(
-          "relative h-[500px] w-full flex flex-col gap-2",
-          css
-        )}
-      >
+      <div className={"relative h-[500px] w-full flex flex-col gap-2"}>
         {images.map((src: any, index: any) => {
           return (
             <div
@@ -89,7 +94,7 @@ const Column = ({ images, css, y }: any) => {
             </div>
           );
         })}
-      </motion.div>
+      </div>
     );
   }
   return (
