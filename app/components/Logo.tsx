@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ size = "sm" }) => {
 
   return (
     <Link href="/">
-      <Image src={logo} alt="logo" width={w} height={h} />
+      <Image src={logo} alt="logo" width={w} height={h} priority/>
     </Link>
   );
 };
