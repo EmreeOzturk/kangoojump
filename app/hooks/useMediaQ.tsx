@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useMediaQuery = (minWidth: number) => {
   const [state, setState] = useState({
-    windowWidth: (typeof window !== undefined) ? window.innerWidth : 0,
+    windowWidth: 0,
     isDesiredWidth: false,
   });
 
