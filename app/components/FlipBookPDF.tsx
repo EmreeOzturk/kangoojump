@@ -76,7 +76,7 @@ const FlipBookPDF = () => {
           renderAnnotationLayer={false}
           renderTextLayer={false}
           onLoadSuccess={onPageLoadSuccess}
-          width={Math.max(pageWidth * 0.4, 200)}
+          width={Math.max(pageWidth * 0.3, 230)}
         />
       </Document>
 

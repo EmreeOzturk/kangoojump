@@ -2,7 +2,7 @@ import FlipBookPDF from "@/app/components/FlipBookPDF";
 
 const Catalog = () => {
   return (
-    <div className="h-[100vh] py-8 mb-32  ">
+    <div className="h-screen  py-8 mb-32  ">
       <FlipBookPDF />
     </div>
   );
