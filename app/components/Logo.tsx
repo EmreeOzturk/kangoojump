@@ -1,22 +1,19 @@
-import React from 'react'
-import logo from '@/public/images/logo.webp'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from "react";
+import logo from "@/public/images/logo.png";
+import Image from "next/image";
+import Link from "next/link";
 interface LogoProps {
-    size?: 'sm' | 'lg'
+  size?: "sm" | "lg" | "xs";
 }
-const Logo: React.FC<LogoProps> = (
-    { size = 'sm' }
-) => {
-    const w = size === 'sm' ? 150 : 450
-    const h = size === 'sm' ? 50 : 150
-    return (
-        <div className="flex items-center gap-2">
-            <Link href="/">
-                <Image src={logo} alt="logo" width={w} height={h} />
-            </Link>
-        </div>
-    )
-}
+const Logo: React.FC<LogoProps> = ({ size = "sm" }) => {
+  const w = size === "sm" ? 240 : size === "lg" ? 400 : 120;
+  const h = size === "sm" ? 80 : size === "lg" ? 120 : 60;
 
-export default Logo
+  return (
+    <Link href="/">
+      <Image src={logo} alt="logo" width={w} height={h} />
+    </Link>
+  );
+};
+
+export default Logo;
