@@ -2,9 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section className="h-screen flex justify-center items-center max-w-7xl m-auto">
-      <div className="grid  grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-        <div className="py-6 md:py-0 md:px-6">
+    <section className="h-full flex justify-center items-center max-w-7xl  m-auto">
+      <div className="grid py-28 grid-cols-1 px-6 mx-auto  md:mt-0 lg:px-8 md:grid-cols-2 md:divide-x">
+        <div className="py-6  md:py-0 md:px-6">
           <h1 className="text-5xl font-bold">Bizimle iletişime geçin</h1>
           <div className="space-y-4 mt-10">
             <a
