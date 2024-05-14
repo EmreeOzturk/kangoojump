@@ -53,7 +53,7 @@ const Contact = () => {
             <input type="email" required className="block border focus:border-none bg-gray-400/40 p-4 w-full rounded-md shadow-sm focus:ring outline-none focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
           </label>
           <label className="block">
-            <span className="mb-1">Message</span>
+            <span className="mb-1">Mesajınız</span>
             <textarea rows={5} required className="block border focus:border-none bg-gray-400/40 outline-none w-full p-4 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
           </label>
           <button type="button" className="border-2 self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Gönder</button>
