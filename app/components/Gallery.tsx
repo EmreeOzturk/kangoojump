@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis";
 import { clsx } from "clsx";
 import Image from "next/image";
 import useDimension from "../hooks/useDimension";
+import { useMediaQuery } from "react-responsive";
 const Gallery = () => {
   const { height } = useDimension();
   const gallery = useRef(null);
@@ -29,7 +30,8 @@ const Gallery = () => {
     };
     requestAnimationFrame(raf);
   }, []);
-  if (window?.innerWidth < 768) {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768)" });
+  if (isTabletOrMobile) {
     return (
       <div className=" bg-red-700 relative flex flex-col md:flex-row gap-2 p-2 ">
         <Column images={[images[0].image, images[1].image, images[3].image]} />
@@ -74,7 +76,9 @@ const Gallery = () => {
 export default Gallery;
 
 const Column = ({ images, css, y }: any) => {
-  if (window?.innerWidth < 768) {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768)" });
+
+  if (isTabletOrMobile) {
     return (
       <div className={"relative h-[500px] w-full flex flex-col gap-2"}>
         {images.map((src: any, index: any) => {
