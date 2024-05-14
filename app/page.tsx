@@ -5,12 +5,12 @@ import Referances from "./components/Referances"
 export default function Home() {
 
   return (
-    <main >
+    <main className="bg-indigo-950/50">
       <Banner />
       <Cards />
       <Gallery />
       <Referances />
     </main>
-  )
+  );
 }
 
