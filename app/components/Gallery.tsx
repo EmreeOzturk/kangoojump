@@ -68,7 +68,6 @@ export default Gallery;
 const Column = ({ images, css, y }: any) => {
   const isMobile = useMediaQuery(768);
   if (isMobile) {
-    console.log("mobile");
     return (
       <div className={"relative h-[500px] w-full flex flex-col gap-2"}>
         {images.map((src: any, index: any) => {
