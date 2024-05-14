@@ -13,8 +13,22 @@ const useMediaQuery = (minWidth: number) => {
       setState({ windowWidth: currentWindowWidth, isDesiredWidth });
     };
     window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
+
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
   }, [state.windowWidth]);
+  useEffect(() => {
+    const resizeHandler = () => {
+      const currentWindowWidth = window.innerWidth;
+      const isDesiredWidth = currentWindowWidth < minWidth;
+      setState({ windowWidth: currentWindowWidth, isDesiredWidth });
+    };
+    window.addEventListener("scroll", resizeHandler);
+    return () => {
+      window.removeEventListener("scroll", resizeHandler);
+    };
+  }, []);
 
   return state.isDesiredWidth;
 };
